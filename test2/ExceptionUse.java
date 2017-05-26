@@ -13,23 +13,23 @@ public class ExceptionUse {
 			System.out.println("缺少命令行参数");
 		} catch(ArithmeticException e){
 			System.out.println("分母为0！");
-		} catch(ExDef e){
+		} catch(ExDef1 e){
 			System.out.println(e.getMessage());
 		}
 	}
-	public static void mac(int i,int j) throws ExDef//使两个数相除的函数
+	public static void mac(int i,int j) throws ExDef1//使两个数相除的函数
 	{
 		if(i<0||j<0){
-			throw new ExDef("输入的值存在负数");
+			throw new ExDef1("输入的值存在负数");
 		}
 		System.out.println(i/j);
 		
 		}
 	}
-	class ExDef extends Exception{//自定义错误类型
+	class ExDef1 extends Exception{//自定义错误类型
 		static final long serialVersionUID = -338752422948L;
-		public ExDef(){}
-		public ExDef(String ms){
+		public ExDef1(){}
+		public ExDef1(String ms){
 		super(ms);
 		}
 		
