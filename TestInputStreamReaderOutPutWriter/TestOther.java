@@ -11,7 +11,7 @@ import java.io.OutputStreamWriter;
 
 import org.junit.Test;
 
-//字节流与字符流之间的转换  InputStreamReader 将字节转换为字符(解码)  OutputStreamWriter将字符转换为字节(解码)
+//字节流与字符流之间的转换  InputStreamReader 将字节转换为字符(解码)  OutputStreamWriter将字符转换为字节(解码)-
 public class TestOther {
 @Test
 	public void test(){
