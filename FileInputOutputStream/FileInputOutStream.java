@@ -34,6 +34,7 @@ public class FileInputOutStream {
 	while((len = fis.read(b)) != -1)
 	{
 		fos.write(b, 0, len);//从头开始写，写入长度为len个
+		fos.flush();
 	}
 	}catch(IOException e)
 	{
