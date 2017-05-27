@@ -1,8 +1,7 @@
-package TestFileInputStream;
+package FileInputOutputStream;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.junit.Test;
@@ -13,7 +12,7 @@ public class TestFileInputStream {
 	public void test() throws IOException{//使用try-catch的方式处理异常更合理
 	File file = new File("Hello.txt");//创建File类对象
 	FileInputStream fil = new FileInputStream(file);//创建一个FileInputStream类对象将需要操作的File类作为形参传入进去
-	int b = fil.read();//调用FileInpotStream中的方法去读取文件中的一个字符，若读取到文件的末尾了，则会返回-1
+	int b = fil.read();//调用FileInpotStream中的方法去读取文件中的一个字节，若读取到文件的末尾了，则会返回-1
 	while(b != -1)
 	{
 		System.out.println((char)b);
@@ -27,20 +26,18 @@ public class TestFileInputStream {
 		try {
 			File file = new File("Hello.txt");//创建File类对象
 			fil = new FileInputStream(file);
-			int b = fil.read();//调用FileInpotStream中的方法去读取文件中的一个字符，若读取到文件的末尾了，则会返回-1
+			int b = fil.read();//调用FileInpotStream中的方法去读取文件中的一个字节，若读取到文件的末尾了，则会返回-1
 			while(b != -1)
 			{
 				System.out.println((char)b);
 				b = fil.read();
 			}
 		} catch (IOException e) {//当文件不存在或者IO的异常则执行
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally{//保证一定能关闭流
 		try {
 			fil.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		}
@@ -52,9 +49,9 @@ public class TestFileInputStream {
 	try {
 		File file = new File("Hello.txt");
 		fil = new FileInputStream(file);
-		byte[] b = new byte[5];//利用
+		byte[] b = new byte[5];//利用byte型数组存放读取的数据，定义每次读取5个字节
 		int len;
-		while((len = fil.read(b))!=-1)
+		while((len = fil.read(b))!=-1)//read(byte[] b)的返回值是int型的，为其存储字节的个数，若已经读到文件末尾了则返回-1
 		{
 			for(int i = 0;i<len;i++)
 			{
@@ -62,14 +59,12 @@ public class TestFileInputStream {
 			}
 		}
 	} catch (IOException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}finally{
 		if(fil != null)
 			try {
 				fil.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 	}
