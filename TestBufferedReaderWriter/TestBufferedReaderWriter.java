@@ -17,7 +17,7 @@ public class TestBufferedReaderWriter {
 	try {
 		//创建读入和读取的对象
 		File file = new File("Hello.txt");
-		File file1 = new File("Hello5.txt");
+		File file1 = new File("Hello7.txt");
 		//提供所需流
 		FileReader fi = new FileReader(file);
 		FileWriter fo = new FileWriter(file1);

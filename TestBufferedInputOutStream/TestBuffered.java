@@ -12,8 +12,8 @@ public class TestBuffered {
 		
 		try {
 			//提供读入和写入的文件
-			File file = new File("Hello.txt");//读入的文件必须存在
-			File file1 = new File("Hello2.txt");
+			File file = new File("C:\\Users\\佳佳\\Desktop\\1.png");//读入的文件必须存在
+			File file1 = new File("C:\\Users\\佳佳\\Desktop\\3.png");
 			//创建节点流
 			FileInputStream fis = new FileInputStream(file);
 			FileOutputStream fos = new FileOutputStream(file1);
