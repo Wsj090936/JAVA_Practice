@@ -1,12 +1,12 @@
 package TestReflection;
 
-public class Animal {
+public class Animal extends Creater<String>{
 	public String name;
 	private int age;
-	Animal(){
+	public Animal(){
 		super();
 	}
-	Animal(String name,int age){
+	private Animal(String name,int age){
 		this.name = name;
 		this.age = age;
 	}
