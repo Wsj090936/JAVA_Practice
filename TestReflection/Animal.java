@@ -16,9 +16,12 @@ public class Animal extends Creater<String>{
 	public void display(String type){
 		System.out.println("Œ“ «"+type);
 	}
+	private Integer info(String type,Integer i){
+		System.out.println(type);
+		return i;
+	}
 	@Override
 	public String toString() {
 		return "Animal [name=" + name + ", age=" + age + "]";
 	}
-	
 }

@@ -36,7 +36,7 @@ public class TestClassCreate {
 	System.out.println(((Class)ars[0]).getName());//java.lang.String
 	System.out.println(13/5);
 	byte[] a;
-	a = String.e
+
 
 } 
 }
