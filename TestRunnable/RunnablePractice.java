@@ -27,5 +27,6 @@ public class RunnablePractice {
 		T.start();
 		Thread T1 = new Thread(p);
 		T1.setName("´°¿Ú¶þ");
+		T1.start();
 	} 
 }
